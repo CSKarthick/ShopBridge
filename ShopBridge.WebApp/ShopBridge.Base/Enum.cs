@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ShopBridge.Base
+{
+    public enum MeasurementUnit
+    {
+        Piece = 1,
+        Kilogram = 2,
+        Litre = 3
+    }
+
+    public enum ProductStatus
+    {
+        Instock = 0,
+        Sold = 1,
+        OutOfStock = 2,
+        Received = 3
+    }
+}

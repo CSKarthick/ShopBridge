@@ -1,0 +1,51 @@
+﻿@model ProductViewModel
+@{
+    ViewData["Title"] = "Product List";
+}
+
+<html>
+<head>
+    <title>Product List</title>
+
+</head>
+<body>
+    <div class="col-md-12 p-a-0 content-body">
+        <a class="act-btn addProduct text-right" href="/Home/ProductEditor" title="Add"><i class="fa fa-plus"></i> Add Product</a>
+        <table id="product-table" class="table table-striped table-bordered" style="width:100%">
+            <thead>
+                <tr>
+                    <th hidden></th>
+                    <th>Product Name</th>
+                    <th>Product Description</th>
+                    <th class="text-right">MRP Rate(₹)</th>
+                    <th class="text-right">Selling Price(₹)</th>
+                    <th class="text-right">Quantity</th>
+                    <th>Product Unit</th>
+                    <th>Status</th>
+                    <th> Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var produt in Model.ProductInformationList)
+                {
+                    <tr>
+                        <td hidden class="Id">@produt.ProductId"</td>
+                        <td class="name">@produt.Name</td>
+                        <td class="desc">@produt.Description</td>
+                        <td class="mrpRate text-right">@produt.MRPRate</td>
+                        <td class="sellingPrice text-right">@produt.SellingPrice</td>
+                        <td class="quantity text-right">@produt.Quantity</td>
+                        <td class="unit">@produt.BaseUnit</td>
+                        <td class="status">@produt.ProductStatus</td>
+                        <td class="action">
+                            <a class="act-btn editProduct" href="/Home/ProductEditor?productId=@produt.ProductId" title="Edit"><i class="fa fa-pencil"></i></a>
+                            <a class="act-btn deleteProduct pull-right" href="/Home/DeleteProduct?idToDelete=@produt.ProductId" title="Remove"><i class="fa fa-trash"></i></a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+<script src="~/js/product.js" asp-append-version="true"></script>

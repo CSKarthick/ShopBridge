@@ -1,0 +1,70 @@
+﻿@model ProductViewModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .input-validation-error {
+        border-color: red !important;
+    }
+</style>
+<form id="productEditor-form" asp-controller="Home" asp-action="SaveProduct" data-ajax="true" data-ajax-method="POST">
+    @Html.HiddenFor(m => m.ProductInfoData.ProductId)
+    @Html.HiddenFor(m => m.ProductInfoData.CreatedDateTime)
+    <div class="animated fadein col-md-12 p-a-0 m-y-1">
+        <div class="b-a-0">
+            <div class="form-group m-y-1">
+                <div class="input-group col-md-12">
+                    @Html.LabelFor(m => m.ProductInfoData.Name, htmlAttributes: new { @class = "col-md-3 form-control-label" })
+                    @Html.TextBoxFor(m => m.ProductInfoData.Name, htmlAttributes: new { @class = "form-control col-md-6" })
+                </div>
+            </div>
+            <div class="row">
+            </div>
+            <div class="form-group m-y-1">
+                <div class="input-group col-md-12">
+                    @Html.LabelFor(m => m.ProductInfoData.Description, htmlAttributes: new { @class = "col-md-3 form-control-label" })
+                    @Html.TextBoxFor(m => m.ProductInfoData.Description, htmlAttributes: new { @class = "form-control col-md-6" })
+                </div>
+            </div>
+            <div class="row">
+            </div>
+            <div class="form-group m-y-1">
+                <div class="input-group col-md-12">
+                    @Html.LabelFor(m => m.ProductInfoData.Quantity, htmlAttributes: new { @class = "col-md-3 form-control-label" })
+                    @Html.TextBoxFor(m => m.ProductInfoData.Quantity, htmlAttributes: new { @class = "form-control col-md-3" })
+                    @Html.DropDownListFor(m => m.ProductInfoData.BaseUnit, Html.GetEnumSelectList(typeof(MeasurementUnit)), new { @class = "form-control col-md-3" })
+                </div>
+            </div>
+            <div class="row">
+            </div>
+            <div class="form-group m-y-1">
+                <div class="input-group col-md-12">
+                    @Html.LabelFor(m => m.ProductInfoData.ProductStatus, htmlAttributes: new { @class = "col-md-3 form-control-label" })
+                    @Html.DropDownListFor(m => m.ProductInfoData.ProductStatus, Html.GetEnumSelectList(typeof(ProductStatus)), new { @class = "form-control col-md-6" })
+                </div>
+            </div>
+            <div class="row">
+            </div>
+            <div class="form-group m-y-1">
+                <div class="input-group col-md-12">
+                    @Html.LabelFor(m => m.ProductInfoData.MRPRate, htmlAttributes: new { @class = "col-md-3 form-control-label" })
+                    @Html.TextBoxFor(m => m.ProductInfoData.MRPRate, htmlAttributes: new { @class = "form-control col-md-6" })
+                </div>
+            </div>
+            <div class="row">
+            </div>
+            <div class="form-group m-y-1">
+                <div class="input-group col-md-12">
+                    @Html.LabelFor(m => m.ProductInfoData.SellingPrice, htmlAttributes: new { @class = "col-md-3 form-control-label" })
+                    @Html.TextBoxFor(m => m.ProductInfoData.SellingPrice, htmlAttributes: new { @class = "form-control col-md-6" })
+                </div>
+            </div>
+            <div class="row">
+            </div>
+        </div>
+    </div>
+    <footer><button id="productEditor-submit" class="btn-primary pull-right" onclick="ValidateAndSubmitProductForm();">Submit</button></footer>
+</form>
+
+<script src="~/js/product.js" asp-append-version="true"></script>

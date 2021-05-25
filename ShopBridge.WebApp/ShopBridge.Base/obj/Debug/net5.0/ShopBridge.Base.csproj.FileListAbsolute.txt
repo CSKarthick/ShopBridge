@@ -1,0 +1,12 @@
+D:\WebProject\OwnProject\ShopBridge\ShopBridge.WebApp\ShopBridge.Base\bin\Debug\net5.0\ShopBridge.Base.deps.json
+D:\WebProject\OwnProject\ShopBridge\ShopBridge.WebApp\ShopBridge.Base\bin\Debug\net5.0\ShopBridge.Base.dll
+D:\WebProject\OwnProject\ShopBridge\ShopBridge.WebApp\ShopBridge.Base\bin\Debug\net5.0\ref\ShopBridge.Base.dll
+D:\WebProject\OwnProject\ShopBridge\ShopBridge.WebApp\ShopBridge.Base\bin\Debug\net5.0\ShopBridge.Base.pdb
+D:\WebProject\OwnProject\ShopBridge\ShopBridge.WebApp\ShopBridge.Base\obj\Debug\net5.0\ShopBridge.Base.csprojAssemblyReference.cache
+D:\WebProject\OwnProject\ShopBridge\ShopBridge.WebApp\ShopBridge.Base\obj\Debug\net5.0\ShopBridge.Base.GeneratedMSBuildEditorConfig.editorconfig
+D:\WebProject\OwnProject\ShopBridge\ShopBridge.WebApp\ShopBridge.Base\obj\Debug\net5.0\ShopBridge.Base.AssemblyInfoInputs.cache
+D:\WebProject\OwnProject\ShopBridge\ShopBridge.WebApp\ShopBridge.Base\obj\Debug\net5.0\ShopBridge.Base.AssemblyInfo.cs
+D:\WebProject\OwnProject\ShopBridge\ShopBridge.WebApp\ShopBridge.Base\obj\Debug\net5.0\ShopBridge.Base.csproj.CoreCompileInputs.cache
+D:\WebProject\OwnProject\ShopBridge\ShopBridge.WebApp\ShopBridge.Base\obj\Debug\net5.0\ShopBridge.Base.dll
+D:\WebProject\OwnProject\ShopBridge\ShopBridge.WebApp\ShopBridge.Base\obj\Debug\net5.0\ref\ShopBridge.Base.dll
+D:\WebProject\OwnProject\ShopBridge\ShopBridge.WebApp\ShopBridge.Base\obj\Debug\net5.0\ShopBridge.Base.pdb
