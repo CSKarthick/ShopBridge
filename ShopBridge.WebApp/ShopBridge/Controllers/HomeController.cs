@@ -24,6 +24,7 @@ namespace ShopBridge.Controllers
 
         public IActionResult Index()
         {
+            _logger.LogInformation("Entered into Index method in home controller");
             var productInfoList = _iProductService.GetAllProductDataList();
 
             var productViewModel = new ProductViewModel
@@ -36,6 +37,7 @@ namespace ShopBridge.Controllers
 
         public IActionResult ProductEditor(int productId = 0) 
         {
+            _logger.LogInformation("Entered into SaveProduct method in home controller");
             var productData = _iProductService.GetProductData(productId);
             var productViewModel = new ProductViewModel
             {
@@ -48,6 +50,7 @@ namespace ShopBridge.Controllers
         [HttpPost]
         public async Task<IActionResult> SaveProduct(ProductViewModel productViewModel) 
         {
+            _logger.LogInformation("Entered into SaveProduct method in home controller");
             if (ModelState.IsValid == false) 
             {
                 return BadRequest();
@@ -65,6 +68,7 @@ namespace ShopBridge.Controllers
         [HttpGet]
         public IActionResult DeleteProduct(int idToDelete) 
         {
+            _logger.LogInformation("Entered into DeleteProduct method in home controller");
             if (idToDelete == null) 
             {
                 return NoContent();

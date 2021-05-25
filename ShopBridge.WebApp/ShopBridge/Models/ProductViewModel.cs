@@ -34,11 +34,11 @@ namespace ShopBridge.WebApp.Models
             public ProductStatus ProductStatus { get; set; }
             
             [Required(AllowEmptyStrings = false)]
-            [Display(Name = "MRP Rate")]
+            [Display(Name = "MRP Rate (₹)")]
             public decimal MRPRate { get; set; } = 0;
             
             [Required(AllowEmptyStrings = false)]
-            [Display(Name = "Selling Price")]
+            [Display(Name = "Selling Price (₹)")]
             public decimal SellingPrice { get; set; } = 0;
             
             public DateTime CreatedDateTime { get; set; }
