@@ -15,9 +15,9 @@ namespace ShopBridge.Base
 
     public enum ProductStatus
     {
-        Instock = 0,
-        Sold = 1,
-        OutOfStock = 2,
-        Received = 3
+        Instock = 1,
+        Sold = 2,
+        OutOfStock = 3,
+        Received = 4
     }
 }
